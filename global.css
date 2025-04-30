@@ -1,0 +1,220 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--background-primary);
+    color: var(--content-secondary);
+    line-height: 1.6;
+    padding: 2rem;
+  }
+  
+  /* Logo */
+  .logo {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+  }
+  .logo img {
+    height: 40px;
+  }
+  
+  /* Layout principal */
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  
+  /* Container geral */
+  .sorteador {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  /* Lado esquerdo */
+  .info-esquerda {
+    flex: 1;
+    min-width: 300px;
+  }
+  .info-esquerda h2 {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  .info-esquerda h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+  }
+  .item-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .item-info img {
+    height: 24px;
+  }
+  .item-info span {
+    font-weight: bold;
+    color: #c3a4ff;
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+  .item-info p {
+    font-size: 0.95rem;
+    color: #aaa;
+  }
+  
+  /* Lado direito */
+  .sortear-direita {
+    flex: 1;
+    min-width: 300px;
+  }
+  .sortear-direita h3 {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .sortear-direita p {
+    font-size: 0.95rem;
+    color: #ccc;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Inputs */
+  .inputs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .input-box label {
+    font-size: 0.8rem;
+    color: #aaa;
+  }
+  .input-box input {
+    background-color: var(--background-primary);
+    color: var(--content-primary);
+    border: none;
+    padding: 0.7rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 80px;
+    text-align: center;
+  }
+  
+  /* Switch (não repetir número) */
+  .repetir {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+  }
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #444;
+    transition: 0.4s;
+    border-radius: 34px;
+  }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 3px;
+    background-color: var(--content-primary);
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  input:checked + .slider {
+    background-color: var(--content-brand);
+  }
+  input:checked + .slider:before {
+    transform: translateX(16px);
+  }
+  
+  /* Botão */
+  .btn-sortear {
+    background-color: var(--background-tertiary);
+    color: var(--content-secondary);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    transition: background 0.3s ease;
+  }
+  .btn-sortear:hover {
+    background-color: var(--background-grey);
+  }
+  
+  /* Resultado */
+  .resultado-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .numero-sorteado {
+    background-color: var(--background-secondary);
+    color: var(--content-primary);
+    padding: 1rem 1.5rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+
+:root { 
+    --content-primary: #FFFFFF;
+    --content-secondary: #C7C9CC;
+    --content-tertiary: #D9D9D9;
+    --content-brand: #C58DE7;
+    --color-inverse: #030203;
+
+    --background-primary: #020202;
+    --background-secondary: #111012;
+    --background-tertiary: #24222E;
+    --background-brand: #C58DE7;
+    --background-grey: #3D3D3D;
+
+    --accent-pink: #D586E0;
+    --accent-blue: #91A1FA;
+    --accent-green: #07C0AA;
+    --accent-lime: #D1DC97;
+    --accent-red: #E9A9B3;
+
+}
+
