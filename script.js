@@ -12,7 +12,7 @@ btnSortear.onclick = function () {
   var min = parseInt(inputMin.value)
   var max = parseInt(inputMax.value)
 
-  // Validação simples
+  // Validação 
   if (isNaN(qtd) || isNaN(min) || isNaN(max)) {
     alert("Preencha todos os campos corretamente!")
     return
